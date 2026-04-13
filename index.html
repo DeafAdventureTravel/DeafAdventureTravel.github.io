@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deaf Adventure Travel | The Journey of Virgilio JR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;900&display=swap');
+
+        :root {
+            --primary: #38bdf8;
+            --accent: #fbbf24;
+            --bg-deep: #05070a;
+        }
+
+        body {
+            font-family: 'Urbanist', sans-serif;
+            background-color: var(--bg-deep);
+            color: #e2e8f0;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.5s ease;
+        }
+
+        .glass-panel:hover {
+            border-color: var(--primary);
+            background: rgba(56, 189, 248, 0.03);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .parallax-hero {
+            background: linear-gradient(rgba(5, 7, 10, 0.7), var(--bg-deep)), 
+                        url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop');
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .destination-overlay {
+            background: linear-gradient(to top, rgba(5, 7, 10, 0.95) 0%, transparent 100%);
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .stat-card {
+            border-left: 2px solid var(--primary);
+            padding-left: 1.5rem;
+        }
+    </style>
+</head>
+<body class="selection:bg-sky-500 selection:text-white">
+
+    <nav class="fixed top-0 w-full z-50 p-4 md:p-6">
+        <div class="max-w-7xl mx-auto glass-panel rounded-full px-6 py-3 md:px-8 md:py-4 flex justify-between items-center">
+            <div class="text-lg md:text-2xl font-black tracking-tighter uppercase">
+                DEAF ADVENTURE<span class="text-sky-400 font-light">TRAVEL</span>
+            </div>
+            <div class="hidden lg:flex gap-8 text-[10px] font-black uppercase tracking-widest text-slate-400">
+                <a href="#home" class="nav-link hover:text-white text-white">The Host</a>
+                <a href="#story" class="nav-link hover:text-white text-white">The Feature</a>
+                <a href="#heritage" class="nav-link hover:text-white text-white">Heritage</a>
+                <a href="#services" class="nav-link hover:text-white text-white">Services</a>
+                <a href="#expeditions" class="nav-link hover:text-white text-white">Expeditions</a>
+            </div>
+            <a href="https://www.facebook.com/share/g/1DXJA4YeRz/" target="_blank" class="bg-sky-500 hover:bg-white hover:text-black text-black px-6 md:px-8 py-2 rounded-full font-bold text-[10px] md:text-xs uppercase tracking-widest transition transform hover:scale-105">
+                Join Group
+            </a>
+        </div>
+    </nav>
+
+    <section id="home" class="parallax-hero text-center px-6">
+        <div class="max-w-5xl">
+            <div class="mb-8 reveal">
+                <span class="glass-panel px-6 py-2 rounded-full text-sky-400 font-bold tracking-[0.3em] uppercase text-[10px]">Anointed Vision by Virgilio JR</span>
+            </div>
+            <h1 class="text-5xl md:text-[8rem] font-black leading-none mb-6 reveal uppercase tracking-tighter text-white">
+                UNLIMITED<br><span class="text-sky-400 italic">ADVENTURE</span>
+            </h1>
+            <p class="text-lg md:text-2xl font-light text-slate-300 max-w-3xl mx-auto mb-12 reveal leading-relaxed">
+                Step into a world without barriers. Experience the raw majesty of the planet through the visual language of our community, curated by the hands of Virgilio JR.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center reveal">
+                <a href="#expeditions" class="bg-white text-black px-12 py-5 rounded-2xl font-black uppercase tracking-tighter hover:bg-sky-400 transition shadow-2xl">Start Journey</a>
+                <a href="#story" class="glass-panel px-12 py-5 rounded-2xl font-black uppercase tracking-tighter hover:border-white transition text-white">Read The Story</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="story" class="py-24 md:py-32 px-6 bg-white/[0.01]">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <div class="mb-6 flex items-center gap-4">
+                        <div class="h-px w-12 bg-sky-500"></div>
+                        <div class="text-sky-400 font-bold uppercase tracking-widest text-xs">The Visionary Heart</div>
+                    </div>
+                    <h2 class="text-4xl md:text-6xl font-black mb-8 leading-tight uppercase text-white">From Woodstock<br><span class="text-sky-400 italic">To The World</span></h2>
+                    <p class="text-lg md:text-xl text-slate-400 leading-relaxed mb-8">
+                        As featured in <span class="text-white font-bold">VoyageATL</span>, the journey of Virgilio Modica JR is a testament to the power of persistence. From his roots in Woodstock, Georgia, he has built a global sanctuary for the Deaf community, bridging the gap between dreams and discovery.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                        <div class="stat-card">
+                            <h4 class="text-white font-black uppercase text-sm mb-2">Authentic Access</h4>
+                            <p class="text-slate-500 text-xs">Direct communication without the barrier of interpreters.</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4 class="text-white font-black uppercase text-sm mb-2">Cultural Depth</h4>
+                            <p class="text-slate-500 text-xs">Exploring the world through the unique lens of Deaf history.</p>
+                        </div>
+                    </div>
+                    <a href="https://voyageatl.com/interview/an-inspired-chat-with-virgilio-modica-jr-of-woodstock-ga-highlight/" target="_blank" class="inline-flex items-center gap-4 text-sky-400 font-black uppercase tracking-widest text-xs hover:text-white transition">
+                        Explore Full Interview Feature <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+                <div class="relative reveal group">
+                    <div class="absolute -inset-4 bg-sky-500/10 rounded-[3rem] blur-3xl opacity-50 group-hover:opacity-100 transition duration-1000"></div>
+                    <div class="relative rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-1000" alt="Adventure Vision">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-12 flex flex-col justify-end">
+                            <p class="text-white font-bold italic text-lg">"We don't just see the world, we feel its pulse through our community."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="heritage" class="py-24 md:py-32 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1 reveal">
+                    <div class="glass-panel p-8 md:p-12 rounded-[3rem] border-l-4 border-l-amber-500">
+                        <h3 class="text-3xl font-black uppercase text-white mb-6">The Legacy of Rome</h3>
+                        <p class="text-slate-400 leading-relaxed mb-6">
+                            Rooted in the ancient heritage of Italy, Virgilio JR brings a deep understanding of European culture to every tour. His background in Rome provides an unparalleled perspective on history, art, and the visual narratives of the Old World.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <i class="fa-solid fa-check text-sky-400"></i>
+                                <span class="text-sm font-bold uppercase tracking-wider">Expertise in Italian Heritage</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <i class="fa-solid fa-check text-sky-400"></i>
+                                <span class="text-sm font-bold uppercase tracking-wider">Mediterranean Native Insights</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 reveal">
+                    <h2 class="text-4xl md:text-6xl font-black mb-8 leading-tight uppercase text-white text-right">Sacred<br><span class="text-sky-400 italic">Foundations</span></h2>
+                    <p class="text-lg md:text-xl text-slate-400 leading-relaxed text-right">
+                        Every expedition is more than travel. It is a pilgrimage back to the roots of culture, guided by a host who understands the weight of history and the power of the Deaf community's shared heritage.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 md:py-32 px-6 bg-white/[0.01]">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-20 text-center reveal">
+                <h2 class="text-4xl md:text-7xl font-black mb-4 uppercase text-white">Our Services</h2>
+                <p class="text-sky-400 font-bold tracking-[0.4em] uppercase text-xs italic">A Specialized Experience</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+                <div class="glass-panel p-10 rounded-[2.5rem] hover:-translate-y-2 transition duration-500">
+                    <i class="fa-solid fa-earth-americas text-sky-400 text-3xl mb-6"></i>
+                    <h4 class="text-white font-black uppercase text-sm mb-4">Hosted Expeditions</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed">Personalized group tours hosted directly by Virgilio JR across global destinations.</p>
+                </div>
+                <div class="glass-panel p-10 rounded-[2.5rem] hover:-translate-y-2 transition duration-500">
+                    <i class="fa-solid fa-comments text-amber-400 text-3xl mb-6"></i>
+                    <h4 class="text-white font-black uppercase text-sm mb-4">Visual Guides</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed">Collaborating with local native sign language experts for deep cultural immersion.</p>
+                </div>
+                <div class="glass-panel p-10 rounded-[2.5rem] hover:-translate-y-2 transition duration-500">
+                    <i class="fa-solid fa-users text-sky-400 text-3xl mb-6"></i>
+                    <h4 class="text-white font-black uppercase text-sm mb-4">Social Networking</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed">Exclusive access to community forums and global travel gatherings.</p>
+                </div>
+                <div class="glass-panel p-10 rounded-[2.5rem] hover:-translate-y-2 transition duration-500">
+                    <i class="fa-solid fa-shield-halved text-amber-400 text-3xl mb-6"></i>
+                    <h4 class="text-white font-black uppercase text-sm mb-4">Travel Protocol</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed">Expert guidance on international documentation and group safety standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="expeditions" class="py-24 md:py-32 px-6 max-w-7xl mx-auto">
+        <div class="mb-20 text-center reveal">
+            <h2 class="text-4xl md:text-7xl font-black mb-4 uppercase text-white">Current Expeditions</h2>
+            <p class="text-sky-400 font-bold tracking-[0.4em] uppercase text-xs italic">Hand-Selected Destinations</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="relative group rounded-[2.5rem] overflow-hidden reveal shadow-2xl h-[500px]">
+                <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=1200" alt="Italy" class="w-full h-full object-cover transition duration-1000 group-hover:scale-110">
+                <div class="absolute inset-0 destination-overlay p-10 flex flex-col justify-end">
+                    <h3 class="text-3xl font-black uppercase text-white">Italy & Malta</h3>
+                    <p class="text-slate-400 text-sm mt-4 leading-relaxed">Connecting with the roots of Rome and the islands of the Mediterranean.</p>
+                    <div class="mt-6 flex items-center gap-2 text-[10px] font-black uppercase text-sky-400 tracking-widest">
+                        <span>Guided Culture</span> <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative group rounded-[2.5rem] overflow-hidden reveal shadow-2xl h-[500px]">
+                <img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?q=80&w=1200" alt="Curacao" class="w-full h-full object-cover transition duration-1000 group-hover:scale-110">
+                <div class="absolute inset-0 destination-overlay p-10 flex flex-col justify-end">
+                    <h3 class="text-3xl font-black uppercase text-white">Curaçao Social</h3>
+                    <p class="text-slate-400 text-sm mt-4 leading-relaxed">Tropical networking at Mambo Beach for the global Deaf family.</p>
+                    <div class="mt-6 flex items-center gap-2 text-[10px] font-black uppercase text-sky-400 tracking-widest">
+                        <span>Island Connect</span> <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative group rounded-[2.5rem] overflow-hidden reveal shadow-2xl h-[500px]">
+                <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=1200" alt="Global Summits" class="w-full h-full object-cover transition duration-1000 group-hover:scale-110">
+                <div class="absolute inset-0 destination-overlay p-10 flex flex-col justify-end">
+                    <h3 class="text-3xl font-black uppercase text-white">Summit Trails</h3>
+                    <p class="text-slate-400 text-sm mt-4 leading-relaxed">High-accessibility mountain treks designed for visual explorers.</p>
+                    <div class="mt-6 flex items-center gap-2 text-[10px] font-black uppercase text-sky-400 tracking-widest">
+                        <span>Adventure Trek</span> <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="connect" class="py-24 md:py-32 px-6">
+        <div class="max-w-7xl mx-auto text-center reveal">
+            <div class="bg-gradient-to-br from-sky-500/10 to-amber-500/10 rounded-[2.5rem] md:rounded-[4rem] p-10 md:p-20 border border-white/5 relative overflow-hidden">
+                <div class="absolute -top-24 -left-24 w-64 h-64 bg-sky-500/10 blur-[100px] rounded-full"></div>
+                <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-amber-500/10 blur-[100px] rounded-full"></div>
+                
+                <h2 class="text-5xl md:text-8xl font-black mb-10 tracking-tighter uppercase leading-none text-white">Enter The<br>Sanctuary</h2>
+                <p class="text-lg md:text-2xl text-slate-400 max-w-2xl mx-auto mb-16">The Facebook group is the central hub for our community, where Virgilio JR shares real-time updates and trip itineraries.</p>
+                <div class="flex justify-center">
+                    <a href="https://www.facebook.com/share/g/1DXJA4YeRz/" target="_blank" class="bg-white text-black px-16 py-6 rounded-2xl font-black uppercase tracking-widest text-sm hover:bg-sky-400 transition transform hover:scale-105 shadow-xl">Facebook Group</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 px-6 text-center border-t border-white/5">
+        <div class="text-2xl md:text-3xl font-black tracking-tighter mb-4 uppercase text-white">DEAF ADVENTURE <span class="text-sky-400 font-light">TRAVEL</span></div>
+        <p class="text-slate-600 text-[10px] font-black uppercase tracking-[0.5em] mb-12 text-white">Hosted by Virgilio JR • Woodstock, GA</p>
+        <div class="flex justify-center gap-10 text-slate-500 mb-16">
+            <a href="https://www.facebook.com/share/g/1DXJA4YeRz/" target="_blank" class="hover:text-sky-400 transition text-white"><i class="fa-brands fa-facebook-f text-xl text-white"></i></a>
+            <a href="#" class="hover:text-sky-400 transition text-white"><i class="fa-brands fa-whatsapp text-xl text-white"></i></a>
+            <a href="#" class="hover:text-sky-400 transition text-white"><i class="fa-brands fa-instagram text-xl text-white"></i></a>
+        </div>
+        <div class="text-[10px] text-slate-900 font-black uppercase italic tracking-[0.3em]">
+            Grace of God, for the people, of Modica.
+        </div>
+    </footer>
+
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        window.addEventListener("load", reveal);
+    </script>
+</body>
+</html>
